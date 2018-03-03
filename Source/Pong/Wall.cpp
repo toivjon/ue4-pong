@@ -9,8 +9,8 @@
 
 AWall::AWall(const FObjectInitializer& objectInitializer) : Super(objectInitializer), mSprite(nullptr)
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+  // Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+  PrimaryActorTick.bCanEverTick = true;
 
   // get a reference on the wall sprite from the sprites directory.
   ConstructorHelpers::FObjectFinder<UPaperSprite> sprite(TEXT("PaperSprite'/Game/Sprites/Wall.Wall'"));
