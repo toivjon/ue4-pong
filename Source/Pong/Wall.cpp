@@ -3,7 +3,6 @@
 #include "Wall.h"
 
 #include "ConstructorHelpers.h"
-#include "PaperSpriteComponent.h"
 #include "PaperSprite.h"
 #include "PaperSpriteComponent.h"
 
