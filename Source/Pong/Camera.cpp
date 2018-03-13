@@ -10,6 +10,8 @@ ACamera::ACamera(const FObjectInitializer& objectInitializer) : ACameraActor(obj
   camera->SetRelativeLocation(FVector(0.f, 100.f, 0.f));
   camera->SetRelativeRotation(FRotator(0.f, -90.f, 0.f));
   camera->SetAbsolute(true, true, true);
+  camera->SetAspectRatio(800.f / 600.f);
+  camera->SetOrthoWidth(800.f);
 }
 
 FVector2D ACamera::GetViewDimensions() const
