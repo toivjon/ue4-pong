@@ -11,3 +11,12 @@ ACamera::ACamera(const FObjectInitializer& objectInitializer) : ACameraActor(obj
   camera->SetRelativeRotation(FRotator(0.f, -90.f, 0.f));
   camera->SetAbsolute(true, true, true);
 }
+
+FVector2D ACamera::GetViewDimensions() const
+{
+  UCameraComponent* camera = GetCameraComponent();
+  FVector2D dimensions;
+  dimensions.X = camera->OrthoWidth;
+  dimensions.Y = 1 / (camera->AspectRatio / camera->OrthoWidth);
+  return dimensions;
+}

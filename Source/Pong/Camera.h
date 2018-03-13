@@ -13,4 +13,5 @@ class PONG_API ACamera : public ACameraActor
   public:
     ACamera() = default;
     ACamera(const FObjectInitializer& objectInitializer);
+    FVector2D GetViewDimensions() const;
 };

@@ -11,6 +11,13 @@ class PONG_API APongGameMode : public AGameModeBase
 {
   GENERATED_BODY()
   public:
+    virtual void InitGame(const FString& MapName, const FString& Options, FString& ErrorMessage) override;
     virtual void StartPlay() override;
-
+  private:
+    class ACamera* mCamera;
+    class ABall*   mBall;
+    class APaddle* mLeftPaddle;
+    class APaddle* mRightPaddle;
+    class AWall*   mTopWall;
+    class AWall*   mBottomWall;
 };
