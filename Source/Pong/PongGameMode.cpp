@@ -3,6 +3,7 @@
 #include "PongGameMode.h"
 #include "Camera.h"
 #include "Ball.h"
+#include "CenterLine.h"
 #include "Paddle.h"
 #include "Wall.h"
 #include "Engine/World.h"
@@ -73,5 +74,13 @@ void APongGameMode::StartPlay()
     mBall = world->SpawnActor<ABall>(ABall::StaticClass());
     mBall->Rename(TEXT("Ball"));
     mBall->SetActorLabel(mBall->GetName());
+
+    // create the center line in the center of the court.
+    mCenterLine = world->SpawnActor<ACenterLine>(ACenterLine::StaticClass());
+    mCenterLine->Rename(TEXT("CenterLine"));
+    mCenterLine->SetActorLabel(mCenterLine->GetName());
+    auto centerLineRotation = mCenterLine->GetActorRotation();
+    centerLineRotation.Pitch = 90.f;
+    mCenterLine->SetActorRotation(centerLineRotation);
   }
 }
