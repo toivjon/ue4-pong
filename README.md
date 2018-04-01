@@ -3,6 +3,8 @@ A Unreal Engine 4 implementation of the classic Pong game.
 
 Contains a single game mode where two human players can play against each other.
 
+Development blog entry: https://www.gamedev.net/blogs/entry/2264559-unreal-engine-pong/
+
 ## Scenes
 Game is split into following scenes:
 1. A welcome scene, which contains the main menu.
